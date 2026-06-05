@@ -18,7 +18,18 @@ const project = {
     "服務體驗問卷：負向詞彙集中於回覆速度",
     "新人訓練回饋：教材深度獲高分",
     "專案 A 報告已輸出 PDF 摘要"
-  ]
+  ],
+  "ui": {
+    "eyebrow": "顧問資料分析",
+    "primaryNav": "回饋分析",
+    "capabilityNav": "分析管線",
+    "flowNav": "顧問流程",
+    "actionLabel": "分析回饋",
+    "capabilityTitle": "分析管線",
+    "flowTitle": "顧問分析流程",
+    "recordTitle": "分析動態",
+    "operationNotice": "已移到問卷回饋分析區，可匯入文字並輸出顧問摘要。"
+  }
 };
 
 const canvas = document.getElementById("visualCanvas");
@@ -198,7 +209,7 @@ function showNotice(action) {
   const notice = document.getElementById("notice");
   if (!notice) return;
   const map = {
-    operate: "操作中心已就緒，所有作業皆可處理。",
+    operate: project.ui?.operationNotice || "已定位到主要工作區。",
     deploy: "課程資源批次已建立。",
     audit: "課後統一診斷已完成。",
     start: "低衝擊訓練已開始。",
